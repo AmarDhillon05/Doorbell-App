@@ -1,9 +1,10 @@
 import mysql.connector
+import os
 
 camdb = mysql.connector.connect(
     host = 'localhost',
     user = 'root',
-    passwd = 'Rb878425!',
+    passwd = os.environ.get("PSWD"),
     database = 'camdb'
 )
 cursor = camdb.cursor()
